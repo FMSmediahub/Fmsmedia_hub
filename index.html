@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<meta name="description" content="FMSmedia is a premium multimedia and creative production company. Capture • Create • Inspire.">
+<title>FMSmedia | Capture • Create • Inspire</title>
+<style>
+:root{--bg:#080808;--panel:#111;--gold:#d9a928;--gold2:#f8d66d;--muted:#b7b2a7;--white:#f7f5ef;--line:rgba(217,169,40,.28);--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(var(--max),92%);margin:auto}.gold{color:var(--gold2)}.eyebrow{text-transform:uppercase;letter-spacing:.22em;color:var(--gold2);font-size:.75rem;font-weight:800}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.85rem 1.25rem;border-radius:999px;background:linear-gradient(110deg,#b98414,#ffe58b,#c18a16);color:#100d05;font-weight:800;border:1px solid #f5d56d;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.outline{background:transparent;color:var(--white);border:1px solid var(--gold)}.btn.small{padding:.6rem .95rem;font-size:.9rem}
+header{position:sticky;top:0;z-index:20;background:rgba(7,7,7,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{display:flex;align-items:center;gap:.65rem;font-size:1.7rem;font-weight:950;letter-spacing:-.07em}.brand-mark{width:38px;height:38px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold2);font-size:1.15rem}.brand span:last-child{color:var(--gold2)}nav{display:flex;align-items:center;gap:1.4rem}nav a{font-size:.9rem;color:#e9e4d8;transition:.2s}nav a:hover,nav a.active{color:var(--gold2)}.menu{display:none;background:none;color:white;border:1px solid var(--line);border-radius:8px;padding:.5rem .7rem;font-size:1.2rem}
+.page{display:none;min-height:65vh}.page.active{display:block;animation:fade .35s ease}@keyframes fade{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+.hero{min-height:660px;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(4,4,4,.98) 0%,rgba(4,4,4,.85) 45%,rgba(4,4,4,.28) 100%),url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=2000&q=85') center/cover}.hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 78% 45%,rgba(215,165,35,.22),transparent 35%)}.hero-content{position:relative;z-index:1;max-width:700px;padding:5rem 0}.hero h1{font-size:clamp(3.2rem,8vw,6.5rem);line-height:.98;letter-spacing:-.065em;margin:.8rem 0 1rem}.hero h1 span{color:var(--gold2)}.hero p{max-width:590px;color:#d3cec2;font-size:1.1rem}.hero-actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}.hero-note{margin-top:3rem;color:#d8c99f;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.section{padding:5.2rem 0}.section.dark{background:#0e0e0e;border-block:1px solid rgba(255,255,255,.05)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.2rem}.section h2,.page-heading h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;letter-spacing:-.045em;margin:.5rem 0}.section-intro{max-width:580px;color:var(--muted);margin:0}.grid{display:grid;gap:1.2rem}.services-grid{grid-template-columns:repeat(3,1fr)}.service-card,.info-card{background:linear-gradient(145deg,#171717,#0d0d0d);border:1px solid var(--line);padding:1.6rem;border-radius:16px;min-height:220px;transition:.25s}.service-card:hover,.info-card:hover{transform:translateY(-5px);border-color:var(--gold)}.service-icon{font-size:1.8rem;color:var(--gold2)}.service-card h3,.info-card h3{margin:.8rem 0 .4rem}.service-card p,.info-card p{color:var(--muted);margin:0}.split{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}.image-panel{min-height:430px;border-radius:18px;background:linear-gradient(0deg,rgba(0,0,0,.25),rgba(0,0,0,.05)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=85') center/cover;border:1px solid var(--line);position:relative}.image-panel:after{content:"FMSmedia • Visual storytelling";position:absolute;bottom:1rem;left:1rem;background:rgba(0,0,0,.7);padding:.65rem 1rem;border-left:2px solid var(--gold)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem}.stat{border-left:2px solid var(--gold);padding-left:1rem}.stat strong{display:block;font-size:1.6rem;color:var(--gold2)}.stat span{font-size:.85rem;color:var(--muted)}
+.page-heading{padding:5rem 0 3rem;background:radial-gradient(ellipse at 75% 20%,rgba(184,132,20,.18),transparent 45%),#0c0c0c;border-bottom:1px solid var(--line)}.page-heading p{max-width:650px;color:var(--muted)}
+.portfolio-grid{grid-template-columns:repeat(3,1fr)}.work{position:relative;min-height:260px;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#151515}.work img{width:100%;height:100%;min-height:260px;object-fit:cover;display:block;transition:transform .5s}.work:hover img{transform:scale(1.06)}.work:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.9))}.work-label{position:absolute;z-index:1;bottom:1rem;left:1.1rem}.work-label small{color:var(--gold2);text-transform:uppercase;letter-spacing:.15em}.filters{display:flex;gap:.6rem;flex-wrap:wrap;margin:0 0 1.5rem}.filter{background:transparent;border:1px solid var(--line);color:#eee;padding:.55rem .9rem;border-radius:999px;cursor:pointer}.filter.active{background:var(--gold);color:#111}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:2rem}.contact-list{display:grid;gap:1rem}.contact-item{padding:1rem;border:1px solid var(--line);border-radius:12px;background:#111}.contact-item small{display:block;color:var(--gold2);text-transform:uppercase;letter-spacing:.12em}.contact-form{padding:1.5rem;background:#111;border:1px solid var(--line);border-radius:16px}.field{display:grid;gap:.35rem;margin-bottom:1rem}.field label{font-size:.85rem;color:#d6cba9}.field input,.field textarea,.field select{width:100%;background:#080808;color:white;border:1px solid #393328;border-radius:8px;padding:.85rem}.field textarea{min-height:130px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{outline:1px solid var(--gold)}
+.cta{padding:3.5rem 0;background:linear-gradient(100deg,#8e6210,#e7bd4b,#8e6210);color:#100d05}.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:2rem}.cta h2{font-size:clamp(1.8rem,4vw,3rem);margin:0}.cta p{margin:.4rem 0 0}.cta .btn{background:#080808;color:#f6d66d;border-color:#080808}
+footer{padding:3rem 0 1.2rem;background:#050505;border-top:1px solid var(--line)}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem}.footer-grid p,.footer-grid a{color:var(--muted);font-size:.9rem}.footer-links{display:grid;gap:.4rem}.copyright{border-top:1px solid #252016;margin-top:2rem;padding-top:1rem;color:#827b6c;font-size:.8rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+@media(max-width:850px){nav{display:none;position:absolute;top:78px;left:0;right:0;background:#090909;border-bottom:1px solid var(--line);padding:1rem 4%;flex-direction:column;align-items:flex-start}nav.open{display:flex}.menu{display:block}.nav>.btn{display:none}.services-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}.split,.contact-grid{grid-template-columns:1fr}.image-panel{min-height:300px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.hero{min-height:620px}.hero-content{padding:4rem 0}.hero h1{font-size:3.3rem}.section{padding:3.8rem 0}.section-head,.cta-inner{display:block}.section-head .btn,.cta .btn{margin-top:1.2rem}.services-grid,.portfolio-grid,.stats,.footer-grid{grid-template-columns:1fr}.service-card{min-height:unset}.page-heading{padding:3.5rem 0 2rem}.work,.work img{min-height:230px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home" aria-label="FMSmedia home"><span class="brand-mark">◉</span><span>FMS<span>media</span></span></a>
+<nav id="nav"><a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
+<a class="btn small" href="#contact">Get a Quote <span>↗</span></a><button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</div></header>
+
+<main>
+<section class="page active" id="home">
+<div class="hero"><div class="wrap"><div class="hero-content">
+<div class="eyebrow">A world-class multimedia company</div>
+<h1>We make<br><span>moments</span><br>matter.</h1>
+<p>FMSmedia transforms ideas, people and experiences into powerful visual stories through photography, film, events and creative media.</p>
+<div class="hero-actions"><a class="btn" href="#services">Explore our services ↗</a><a class="btn outline" href="#portfolio">View portfolio</a></div>
+<div class="hero-note">Capture&nbsp; • &nbsp;Create&nbsp; • &nbsp;Inspire</div>
+</div></div></div>
+<div class="section"><div class="wrap">
+<div class="section-head"><div><div class="eyebrow">What we do</div><h2>Creative vision.<br><span class="gold">Exceptional execution.</span></h2></div><p class="section-intro">From a single portrait to a large-scale production, we bring craft, clarity and purpose to every frame.</p></div>
+<div class="grid services-grid">
+<article class="service-card"><div class="service-icon">◉</div><h3>Photography</h3><p>Portraits, campaigns, products and events captured with intention and detail.</p></article>
+<article class="service-card"><div class="service-icon">▶</div><h3>Videography & Film</h3><p>Cinematic films, commercials, documentaries and brand stories.</p></article>
+<article class="service-card"><div class="service-icon">✦</div><h3>Events & Live Production</h3><p>Professional event coverage, highlights and live visual experiences.</p></article>
+<article class="service-card"><div class="service-icon">✎</div><h3>Branding & Design</h3><p>Visual identities and creative assets that make brands memorable.</p></article>
+<article class="service-card"><div class="service-icon">◎</div><h3>Digital Content</h3><p>Social-first content designed to connect with audiences and build presence.</p></article>
+<article class="service-card"><div class="service-icon">✧</div><h3>Creative Direction</h3><p>Concept development, visual planning and production coordination.</p></article>
+</div></div></div>
+<div class="cta"><div class="wrap cta-inner"><div><h2>Your vision deserves a powerful story.</h2><p>Let's create something unforgettable together.</p></div><a class="btn" href="#contact">Start a project ↗</a></div></div>
+</section>
+
+<section class="page" id="about">
+<div class="page-heading"><div class="wrap"><div class="eyebrow">The company</div><h1>About <span class="gold">FMSmedia</span></h1><p>Creative thinking meets professional production. We help people and brands communicate with confidence through compelling visual experiences.</p></div></div>
+<div class="section"><div class="wrap split"><div><div class="eyebrow">Who we are</div><h2>We don't just capture images. <span class="gold">We shape stories.</span></h2><p class="section-intro">FMSmedia is a multimedia and creative production company built around the belief that every moment, message and brand has a story worth telling. Our approach combines thoughtful concepts, technical skill and a commitment to quality.</p><p class="section-intro" style="margin-top:1rem">Whether working with individuals, businesses, event organisers or growing brands, we aim to make every collaboration clear, creative and memorable.</p><div class="stats"><div class="stat"><strong>01</strong><span>Creative vision</span></div><div class="stat"><strong>02</strong><span>Professional craft</span></div><div class="stat"><strong>03</strong><span>Lasting impact</span></div></div></div><div class="image-panel"></div></div></div>
+<div class="section dark"><div class="wrap grid services-grid"><article class="info-card"><div class="eyebrow">Our mission</div><h3>Make creativity count.</h3><p>Deliver purposeful multimedia solutions that communicate clearly, connect emotionally and elevate every story.</p></article><article class="info-card"><div class="eyebrow">Our vision</div><h3>Think beyond borders.</h3><p>Grow into an internationally recognised creative media company known for excellence, innovation and impact.</p></article><article class="info-card"><div class="eyebrow">Our values</div><h3>Quality in every frame.</h3><p>Creativity, integrity, collaboration, reliability and attention to detail guide our work.</p></article></div></div>
+</section>
+
+<section class="page" id="services">
+<div class="page-heading"><div class="wrap"><div class="eyebrow">Our capabilities</div><h1>Services built around <span class="gold">your story.</span></h1><p>Flexible creative production for individuals, businesses, events and organisations.</p></div></div>
+<div class="section"><div class="wrap grid services-grid">
+<article class="service-card"><div class="service-icon">◉</div><h3>Photography</h3><p>Studio and outdoor portraits, weddings, corporate photography, product images, lifestyle campaigns and event coverage.</p></article>
+<article class="service-card"><div class="service-icon">▶</div><h3>Videography</h3><p>Brand films, promotional videos, interviews, music visuals, event highlights, documentaries and social video.</p></article>
+<article class="service-card"><div class="service-icon">✦</div><h3>Events & Live Media</h3><p>Event photography and film, red-carpet coverage, conference media, stage visuals and highlight edits.</p></article>
+<article class="service-card"><div class="service-icon">✎</div><h3>Branding & Design</h3><p>Logo direction, brand collateral, campaign graphics, promotional designs and visual communication.</p></article>
+<article class="service-card"><div class="service-icon">◎</div><h3>Digital & Social Content</h3><p>Content packages, reels, short-form video, campaign assets and platform-ready creative storytelling.</p></article>
+<article class="service-card"><div class="service-icon">✧</div><h3>Film & Creative Production</h3><p>Concept development, scripting support, creative direction, production planning and post-production.</p></article>
+</div></div><div class="cta"><div class="wrap cta-inner"><div><h2>Have a project in mind?</h2><p>Tell us what you want to create and we'll discuss the right approach.</p></div><a class="btn" href="#contact">Request a quote ↗</a></div></div>
+</section>
+
+<section class="page" id="portfolio">
+<div class="page-heading"><div class="wrap"><div class="eyebrow">Selected creative work</div><h1>Stories in <span class="gold">every frame.</span></h1><p>A visual sample of the creative categories FMSmedia can bring to life. Replace these sample images with your own commissioned projects and finished work.</p></div></div>
+<div class="section"><div class="wrap"><div class="filters"><button class="filter active" data-filter="all">All work</button><button class="filter" data-filter="photo">Photography</button><button class="filter" data-filter="film">Film</button><button class="filter" data-filter="events">Events</button><button class="filter" data-filter="brand">Brand & lifestyle</button></div>
+<div class="grid portfolio-grid" id="portfolioGrid">
+<article class="work" data-category="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80" alt="Portrait photography sample"><div class="work-label"><small>Photography</small><h3>Portrait stories</h3></div></article>
+<article class="work" data-category="film"><img loading="lazy" src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=80" alt="Cinema camera production sample"><div class="work-label"><small>Film production</small><h3>Behind the lens</h3></div></article>
+<article class="work" data-category="events"><img loading="lazy" src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=80" alt="Live event crowd sample"><div class="work-label"><small>Events</small><h3>Live experiences</h3></div></article>
+<article class="work" data-category="brand"><img loading="lazy" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=80" alt="Fashion and lifestyle campaign sample"><div class="work-label"><small>Brand & lifestyle</small><h3>Campaign energy</h3></div></article>
+<article class="work" data-category="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Lifestyle portrait sample"><div class="work-label"><small>Photography</small><h3>Personal expression</h3></div></article>
+<article class="work" data-category="events"><img loading="lazy" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80" alt="Celebration event sample"><div class="work-label"><small>Events</small><h3>Celebrations</h3></div></article>
+</div></div></div>
+</section>
+
+<section class="page" id="contact">
+<div class="page-heading"><div class="wrap"><div class="eyebrow">Let's work together</div><h1>Make your next move <span class="gold">memorable.</span></h1><p>Share a few details about your project. Your enquiry will open in WhatsApp so our team can follow up with you.</p></div></div>
+<div class="section"><div class="wrap contact-grid"><div><div class="eyebrow">Contact details</div><h2>Start a conversation.</h2><p class="section-intro" style="margin-bottom:1.5rem">For bookings, collaborations, event coverage and creative production enquiries, reach FMSmedia through the contacts below.</p>
+<div class="contact-list">
+<div class="contact-item"><small>WhatsApp</small><a href="https://wa.me/2348162963893" target="_blank" rel="noopener">+234 816 296 3893 ↗</a></div>
+<div class="contact-item"><small>Call</small><a href="tel:+2348152880990">+234 815 288 0990 ↗</a></div>
+<div class="contact-item"><small>Company</small><span>FMSmedia — Capture • Create • Inspire</span></div>
+<div class="contact-item"><small>Email / Office</small><span>To be added by FMSmedia</span></div>
+</div></div>
+<form class="contact-form" id="contactForm"><div class="eyebrow">Project enquiry</div><h3>Tell us what you have in mind.</h3>
+<div class="field"><label for="name">Your name</label><input id="name" name="name" required placeholder="Enter your name"></div>
+<div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required placeholder="Your contact number"></div>
+<div class="field"><label for="service">Service required</label><select id="service" name="service" required><option value="">Choose a service</option><option>Photography</option><option>Videography / Film</option><option>Events / Live Production</option><option>Branding / Design</option><option>Digital Content</option><option>Other / Collaboration</option></select></div>
+<div class="field"><label for="details">Project details</label><textarea id="details" name="details" required placeholder="Tell us about your project, date and location..."></textarea></div>
+<button class="btn" type="submit">Send enquiry on WhatsApp ↗</button><p style="font-size:.78rem;color:var(--muted);margin:.8rem 0 0">Your message is prepared in WhatsApp. You can review it before sending.</p>
+</form></div></div>
+</section>
+</main>
+
+<footer><div class="wrap"><div class="footer-grid"><div><a class="brand" href="#home"><span class="brand-mark">◉</span><span>FMS<span>media</span></span></a><p>Turning moments into timeless stories. Premium multimedia and creative production with a vision beyond borders.</p><div class="eyebrow">Capture • Create • Inspire</div></div><div><h3>Explore</h3><div class="footer-links"><a href="#about">About FMSmedia</a><a href="#services">Our services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div></div><div><h3>Connect</h3><div class="footer-links"><a href="https://wa.me/2348162963893" target="_blank" rel="noopener">WhatsApp: +234 816 296 3893</a><a href="tel:+2348152880990">Call: +234 815 288 0990</a><a href="#contact">Bookings & collaborations</a></div></div></div><div class="copyright"><span>© <span id="year"></span> FMSmedia. All rights reserved.</span><span>Your Vision. Our Creativity.</span></div></div></footer>
+<script>
+const pages=[...document.querySelectorAll('.page')], links=[...document.querySelectorAll('nav a')];
+function showPage(){let id=(location.hash||'#home').slice(1);if(!pages.some(p=>p.id===id))id='home';pages.forEach(p=>p.classList.toggle('active',p.id===id));links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));document.getElementById('nav').classList.remove('open');window.scrollTo({top:0,behavior:'smooth'});}
+window.addEventListener('hashchange',showPage);document.getElementById('menu').addEventListener('click',()=>document.getElementById('nav').classList.toggle('open'));links.forEach(a=>a.addEventListener('click',()=>document.getElementById('nav').classList.remove('open')));
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');let f=btn.dataset.filter;document.querySelectorAll('.work').forEach(card=>card.style.display=(f==='all'||card.dataset.category===f)?'block':'none');}));
+document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();let d=new FormData(e.target);let msg=`Hello FMSmedia! I'd like to make a project enquiry.%0A%0AName: ${encodeURIComponent(d.get('name'))}%0APhone: ${encodeURIComponent(d.get('phone'))}%0AService: ${encodeURIComponent(d.get('service'))}%0ADetails: ${encodeURIComponent(d.get('details'))}`;window.open('https://wa.me/2348162963893?text='+msg,'_blank','noopener');});
+document.getElementById('year').textContent=new Date().getFullYear();showPage();
+</script>
+</body></html>
